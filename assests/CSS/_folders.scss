@@ -1,0 +1,38 @@
+.folders {
+  padding-top: 1.5rem;
+  @include flex(stretch, flex-start);
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.folder_box {
+  border: $border-primary;
+  width: 11.625rem;
+  border-radius: 5px;
+  padding: 0.75em;
+}
+.folder_details {
+  @include flex(center, flex-start);
+  gap: 1em;
+  img {
+    height: 4vh;
+  }
+}
+.folder_name {
+  color: $text-dark;
+  font-size: 13px;
+  line-height: 18px;
+}
+.folder_count {
+  margin-left: 1.5em;
+  color: #7d7d7d;
+}
+.folder_icons {
+  @include flex(center, space-between);
+  color: #999998;
+  a {
+    transition: 1s ease;
+    &:hover {
+      filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+    }
+  }
+}

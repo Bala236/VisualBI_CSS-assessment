@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@mixin flex($alignI, $justifyC) {
+  display: flex;
+  align-items: $alignI;
+  justify-content: $justifyC;
+}
+body {
+  font-family: "Inter", sans-serif;
+  @include flex(stretch, flex-start);
+  // overflow-x: hidden;
+  font-size: 12px;
+  position: relative;
+  height: 100vh;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+.p-1 {
+  padding: 1em;
+}
+.px-1 {
+  padding: 0 1em;
+}

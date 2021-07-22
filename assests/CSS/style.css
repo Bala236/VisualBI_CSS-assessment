@@ -36,6 +36,19 @@ ul {
   list-style: none;
 }
 
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.p-1 {
+  padding: 1em;
+}
+
+.px-1 {
+  padding: 0 1em;
+}
+
 aside {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,7 +64,7 @@ aside {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  border-right: 1px solid #f1f1f1;
+  border-right: 1px solid #eaeaea;
   -ms-flex-preferred-size: 6%;
       flex-basis: 6%;
   height: 100vh;
@@ -60,36 +73,23 @@ aside {
 }
 
 aside div {
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #eaeaea;
   width: 100%;
   padding: 0.7rem;
   height: 10vh;
 }
 
 aside div:nth-last-child(1) {
-  border-left: 2px solid #0085FF;
-  background: #EDF4FD;
+  border-left: 2px solid #0085ff;
+  background: #edf4fd;
 }
 
 main {
   width: 94%;
 }
 
-.container {
-  width: 95%;
-  margin: 0 auto;
-}
-
-.p-1 {
-  padding: 1em;
-}
-
-.px-1 {
-  padding: 0 1em;
-}
-
 nav {
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #eaeaea;
 }
 
 nav .container {
@@ -122,8 +122,8 @@ nav .container {
 }
 
 .search input#search-bar {
-  padding: .7em 2em;
-  background: #ffffff;
+  padding: 0.7em 2em;
+  background: #fff;
   border: 1px solid #d1d5db;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
@@ -195,7 +195,7 @@ nav .container {
 
 .folder_nav {
   padding: 0.7em 0;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #eaeaea;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,10 +239,10 @@ nav .container {
 }
 
 .folder_box {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #eaeaea;
   width: 11.625rem;
   border-radius: 5px;
-  padding: .75em;
+  padding: 0.75em;
 }
 
 .folder_details {
@@ -283,11 +283,17 @@ nav .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #999999;
+  color: #999998;
 }
 
-.folder_icons a img :hover {
-  color: #0084ff;
+.folder_icons a {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.folder_icons a:hover {
+  -webkit-filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+          filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
 #info {
@@ -300,10 +306,12 @@ nav .container {
   width: 18rem;
   right: 0;
   bottom: 0;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #eaeaea;
   -webkit-box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
           box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
   background: #fff;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
 }
 
 .info_topBar {
@@ -359,6 +367,7 @@ nav .container {
 .navPills li a {
   padding-bottom: 1em;
   color: #666666;
+  border-bottom: 2px solid #fff;
 }
 
 .navPills li a.active, .navPills li a:hover {
@@ -389,8 +398,7 @@ nav .container {
 .comment::after {
   position: absolute;
   content: "";
-  border-bottom: 1px solid #d1d5db;
-  /* background: grey; */
+  border-bottom: 1px solid #eaeaea;
   width: 100%;
   left: 0;
   margin-top: 1.3em;
@@ -412,7 +420,6 @@ nav .container {
   bottom: 0;
   background: #fff;
   border-radius: 4px;
-  /* padding: 0px; */
   border: 1px solid #fff;
   border-right: 0;
   border-bottom: 0;
@@ -431,22 +438,22 @@ nav .container {
 }
 
 .textarea {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #eaeaea;
   border-left: 0;
   border-right: 0;
-  margin-top: 5.5rem;
+  margin-top: 9.7em;
 }
 
-.mx-1 {
-  margin: 0 1em;
+.textarea div {
+  margin: 0.75em;
 }
 
 textarea {
   width: 100%;
   border: 1px solid #d1d5db;
   border-radius: 6px;
-  margin: 1em 1em 1em 0;
   padding: 0.5rem;
+  display: block;
 }
 
 .btn {
@@ -460,12 +467,12 @@ textarea {
       -ms-flex-pack: end;
           justify-content: flex-end;
   gap: 1em;
-  margin-top: .5em;
+  padding: 1.5em 1em;
 }
 
 .btn button {
   cursor: pointer;
-  padding: 0.7em 1em;
+  padding: 0.5em 1em;
   border-radius: 4px;
   border: none;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);

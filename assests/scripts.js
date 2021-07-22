@@ -7,6 +7,11 @@ function showDetails() {
         x.style.display = "none";
     }
 }
+// close btn
+function closeBtn() {
+    var cl = document.getElementById("info");
+    cl.style.display = "none";
+}
 // toggle tabs
 function openTab(tab) {
     var x = document.getElementsByClassName("info");
@@ -15,15 +20,13 @@ function openTab(tab) {
     }
     document.getElementById(tab).style.display = "block";
 }
-
-
 // Add active class to the current button (highlight it)
 var header = document.getElementById("navActive");
 var btns = header.getElementsByClassName("navPills_link");
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
+    btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
 }
